@@ -12,7 +12,7 @@ async function startServer() {
     await sequelize.authenticate();
     console.log("✅ PostgreSQL connected successfully");
 
-    await sequelize.sync(); // creates tables automatically (for now)
+    await sequelize.sync({ alter: true }); // creates tables automatically (for now)
 
     app.listen(PORT, () => {
       console.log(`Server running on port ${PORT}`);

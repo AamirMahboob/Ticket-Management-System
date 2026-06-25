@@ -15,6 +15,7 @@ export const createTicket = async (
       title,
       description,
       priority,
+      
       createdBy: req.user.id,
     });
 
